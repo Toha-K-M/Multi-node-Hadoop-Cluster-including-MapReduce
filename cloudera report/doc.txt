@@ -1,0 +1,50 @@
+1. disable firewall
+ $ sudo ufw disable
+
+2. 
+$ hostname
+$ hostname -f
+#duita same hote hobe)
+#na hoile /etc/hosts e ->  ip address	hostname
+add korte hobe. tailei hobe 
+taile nijer shathe nije ping korbe
+
+onno node er shathe ping korbe na
+
+3. protita node er ip address, nijertay ar onnogulay
+/etc/hosts e add korte hobe
+$ sudo gedit /etsc/hosts
+
+tarpor ping korte parbo multi node
+
+4. cloudera - (https://www.cloudera.com/documentation/enterprise/5-8-x/topics/cm_ig_install_path_b.html)
+
+ 	
+embedded database install
+sudo apt-get install cloudera-manager-server-db-2
+
+
+repository add korbo
+$ cd /etc/apt
+$ sudo gedit sources.list
+-> add korbo
+deb [arch=amd64] http://archive.cloudera.com/cm5/ubuntu/trusty/amd64/cm trusty-cm5 contrib
+deb-src http://archive.cloudera.com/cm5/ubuntu/trusty/amd64/cm trusty-cm5 contrib
+
+or 
+
+$ sudo add-apt-repository "deb [arch=amd64] http://archive.cloudera.com/cm5/ubuntu/trusty/amd64/cm trusty-cm5 contrib"
+sudo add-apt-repository "deb-src http://archive.cloudera.com/cm5/ubuntu/trusty/amd64/cm trusty-cm5 contrib"
+
+## eta ubuntu 14.04 er repo 
+## from " https://www.cloudera.com/documentation/enterprise/release-notes/topics/cm_vd.html " (Repo File column for ubuntu 14.04 trusty)
+
+4. install java
+$ sudo apt-get install oracle-j2sdk1.7
+
+4. install cloudera manage and cloudera manager server
+$ sudo apt-get install cloudera-manager-daemons cloudera-manager-server 
+
+
+$ sudo service cloudera-scm-server-db start
+$ sudo service cloudera-scm-server start
